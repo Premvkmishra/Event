@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Sync Engine</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        h1, h2, label {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: CadetBlue3; /* Color set to cadet blue 3 */
+        }
+
+        form {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        .big-font {
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .scheduled-posts {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="colorChangingText">Auto Sync Engine</h1>
+    <br>
+    <br>
+    <br>
+    <form method="post" action="/submit">
+        <label for="url" class="big-font">ENTER THE WEBSITE URL YOU WANT TO SCRAPE:</label>
+        <input type="text" id="url" name="url" required>
+        <br>
+        <br>
+        <br>
+        <label for="scheduled_time" class="big-font">SCHEDULE THE TIME FOR YOUR POST:</label>
+        <input type="datetime-local" id="scheduled_time" name="scheduled_time" required>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button type="submit" class="big-font">SCHEDULE POST</button>
+    </form>
+
+    <h2 class="scheduled-posts">Scheduled Posts</h2>
+    <ul>
+        {% for post in scheduled_posts %}
+            <li class="scheduled-posts">{{ post.url }} - {{ post.scheduled_time }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

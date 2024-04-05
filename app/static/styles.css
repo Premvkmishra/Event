@@ -1,0 +1,66 @@
+/* styles.css */
+
+body {
+    background-color: #000; /* black background */
+    color: #fff; /* white text */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em; /* Increase font size */
+    font-weight: bold;
+    margin-top: 50px; /* Add space at the top */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center; /* Center the form */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+input {
+    width: 70%; /* Make the input field shorter */
+    padding: 10px;
+    font-size: 1.2em; /* Increase font size */
+    margin-bottom: 10px;
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50; /* green button color */
+    color: #fff; /* white text on button */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 1.2em; /* Increase font size */
+}
+
+button:hover {
+    background-color: #45a049; /* darker green on hover */
+}
+
+/* Placeholder for a background image */
+body {
+    background-image: url('https://wallpapercave.com/wp/wp6058956.jpg'); /* Replace with your actual image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Calendar icon */
+input[type="datetime-local"] {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3190/3190864.png'); /* Replace with your actual icon URL */
+    background-size: 30px; /* Set icon size */
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 40px; /* Adjust padding for the icon */
+}
